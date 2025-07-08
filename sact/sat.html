@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BM Academy | SACT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/sact.css">
+    <link rel="stylesheet" href="./assets/css/sat.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="assets/images/BM Logo Final-01.png">
+
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+    <!-- Framework - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <!-- Icon Font - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css">
+
+    <!-- Animation - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+
+    <!-- Cursor - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/cursor.css">
+
+    <!-- Carousel - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+
+    <!-- Video & Image Popup - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+
+    <!-- Vanilla Calendar - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vanilla-calendar.min.css">
+
+    <!-- Custom - CSS Include -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+
+</head>
+
+<body>
+    <section>
+        <!-- Navbar -->
+        <nav style="background: linear-gradient(to right, #2F2BD4, #6A5AE0)"
+            class="fixed top-0 left-0 w-full h-[70px] px-6 md:px-16 lg:px-24 xl:px-32 flex items-center justify-between z-50   shadow-md transition-all">
+
+            <!-- Logo -->
+            <a href="#">
+                <img src="assets/images/logo/whitelogo.png" alt="Collab - Online Learning Platform"
+                    style="height: 55px; width: auto;" />
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="text-white md:flex hidden items-center gap-10">
+                <li><a class="hover:text-white/70 transition" href="#home">Home</a></li>
+                <li><a class="hover:text-white/70 transition" href="#services">Services</a></li>
+                <li><a class="hover:text-white/70 transition" href="#who-can-apply">Who Can Apply</a></li>
+                <li><a class="hover:text-white/70 transition" href="#testimonials">Testimonials</a></li>
+            </ul>
+
+            <!-- Desktop Button -->
+            <button type="button" onclick="document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });"
+                class="bg-white text-gray-700 md:inline hidden text-sm hover:opacity-90 active:scale-95 transition-all w-40 h-11 rounded-full">
+                Get started
+            </button>
+
+            <!-- Mobile Menu Toggle -->
+            <button aria-label="menu-btn" id="menuToggle"
+                class="menu-btn inline-block md:hidden active:scale-90 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="#fff">
+                    <path
+                        d="M3 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2zm0 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2zm0 7a1 1 0 1 0 0 2h24a1 1 0 1 0 0-2z" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Offcanvas Mobile Menu -->
+        <div id="mobileMenu" style="background: linear-gradient(to right, #2F2BD4, #6A5AE0)"
+            class="fixed inset-0  p-6 z-50 transform translate-x-full transition-transform duration-300 md:hidden">
+
+
+            <!-- Close Button -->
+            <button id="closeMenu" class="absolute top-5 right-5 text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                    <line x1="6" y1="18" x2="18" y2="6" />
+                </svg>
+            </button>
+
+            <ul class="flex flex-col space-y-4 text-white text-lg mt-16">
+                <li><a href="#home" class="text-sm">Home</a></li>
+                <li><a href="#services" class="text-sm">Services</a></li>
+                <li><a href="#who-can-apply" class="text-sm">Who Can Apply</a></li>
+                <li><a href="#testimonials" class="text-sm">Testimonials</a></li>
+            </ul>
+
+            <button type="button" onclick="document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });"
+                class="mt-6 bg-white text-gray-700 text-sm hover:opacity-90 active:scale-95 transition-all w-full h-11 rounded-full">
+                Get started
+            </button>
+        </div>
+        <script>
+            const menuToggle = document.getElementById("menuToggle");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const closeMenu = document.getElementById("closeMenu");
+
+            menuToggle.addEventListener("click", () => {
+                mobileMenu.classList.remove("translate-x-full");
+            });
+
+            closeMenu.addEventListener("click", () => {
+                mobileMenu.classList.add("translate-x-full");
+            });
+        </script>
+    </section>
+
+
+    <section class="sat-home-section" data-aos="fade-in" id="home">
+        <div class="overlay">
+            <div class="hero-content" data-aos="zoom-in" data-aos-delay="300">
+                <h1>
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>SAT Scholarship Test</span><br />
+                    <strong class="headline">Achieve More. Pay Less.</strong>
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-brain"></i>
+                    Take our <strong>FREE Online Aptitude Test</strong><br />
+                    and unlock up to <strong>80% Scholarship</strong> on your dream course!
+                </p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="700">
+                    <button class="btn btn-register"
+                        onclick="window.open('https://wa.me/919944288271?text=Hi%20BM%20Academy%2C%20I%20am%20interested%20in%20taking%20the%20SAT%20test.', '_blank')">
+                        <i class="fas fa-clipboard-list"></i> Register Now
+                    </button>
+                    <button class="btn btn-test" onclick="location.href='#take-test'">
+                        <i class="fas fa-bullseye"></i> Take the Test
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="sat-about-sat py-16 px-6 md:px-20 lg:px-32 bg-white" id="services" data-aos="fade-up">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
+                🎓 What is <span class="text-indigo-600">SAT?</span>
+            </h2>
+            <p class="text-gray-600 text-lg mb-12 leading-relaxed">
+                The <strong>BM Academy SAT (Scholarship Assessment Test)</strong> is an exclusive online aptitude-based
+                scholarship exam designed to:
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-indigo-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-indigo-600 text-2xl"><i class="fas fa-bullseye"></i></span>
+                        <h4 class="text-lg font-semibold text-gray-800">Aptitude + Logic Test</h4>
+                    </div>
+                    <p class="text-gray-600">
+                        Measure your logic, reasoning, and career readiness with a smart test designed to reflect your
+                        potential.
+                    </p>
+                </div>
+
+                <div class="bg-yellow-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-yellow-600 text-2xl"><i class="fas fa-award"></i></span>
+                        <h4 class="text-lg font-semibold text-gray-800">Scholarship Opportunity</h4>
+                    </div>
+                    <p class="text-gray-600">
+                        Unlock scholarships across our top IT, Bank, and Career courses based on your performance.
+                    </p>
+                </div>
+
+                <div class="bg-green-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-green-600 text-2xl"><i class="fas fa-mobile-alt"></i></span>
+                        <h4 class="text-lg font-semibold text-gray-800">100% Online + Quick</h4>
+                    </div>
+                    <p class="text-gray-600">
+                        Take the test in just <strong>25–30 minutes</strong> using your mobile or laptop – completely
+                        free of cost.
+                    </p>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-blue-600 text-2xl"><i class="fas fa-envelope-open-text"></i></span>
+                        <h4 class="text-lg font-semibold text-gray-800">Results in 48 Hours</h4>
+                    </div>
+                    <p class="text-gray-600">
+                        Get your result PDF via <strong>Email & WhatsApp</strong> within 48 hours of submission.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-10 grid gap-4 sm:grid-cols-2 justify-center text-left max-w-2xl mx-auto">
+                <div class="flex items-center gap-4 bg-gray-100 hover:bg-indigo-50 transition p-4 rounded-lg shadow-sm"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-blue-400 p-2 rounded-full text-lg">
+                        <i class="fas fa-stopwatch"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-700 font-medium">Mode:</p>
+                        <p class="text-sm text-gray-500">Google Form with Smart Timer</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 bg-gray-100 hover:bg-blue-50 transition p-4 rounded-lg shadow-sm"
+                    data-aos="fade-up" data-aos-delay="600">
+                    <div class="text-blue-400 p-2 rounded-full text-lg">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-700 font-medium">Results:</p>
+                        <p class="text-sm text-gray-500">Sent via Email + WhatsApp within 48 hrs</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="who-can-apply" class="bg-white py-20">
+        <div
+            class="mx-auto px-6 md:px-16 lg:px-24 xl:px-32 flex flex-col-reverse md:flex-row items-center md:justify-between gap-12 pb-16 min-h-[600px]">
+
+            <!-- Left Content -->
+            <div class="w-full md:w-1/2 max-md:mb-8 text-left" data-aos="fade-right" data-aos-delay="100">
+
+                <!-- Top Label -->
+                <p class="flex items-center gap-1 text-gray-500 text-xs mb-2" data-aos="fade-up" data-aos-delay="150">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3 0a1 1 0 0 1 1 1v1h1a1 1 0 0 1 0 2H4v1a1 1 0 0 1-2 0V4H1a1 1 0 0 1 0-2h1V1a1 1 0 0 1 1-1m0 10a1 1 0 0 1 1 1v1h1a1 1 0 0 1 0 2H4v1a1 1 0 1 1-2 0v-1H1a1 1 0 0 1 0-2h1v-1a1 1 0 0 1 1-1m7-10a1 1 0 0 1 .967.744L12.146 5.2 15.5 7.134a1 1 0 0 1 0 1.732l-3.354 1.935-1.18 4.455a1 1 0 0 1-1.933 0L7.854 10.8 4.5 8.866a1 1 0 0 1 0-1.732l3.354-1.935L9.034.744A1 1 0 0 1 10 0"
+                            fill="#6B7280" />
+                    </svg>
+                    Who Can Apply + Why Take It (Target Section)
+                </p>
+
+                <!-- Heading -->
+                <h1 class="font-extrabold text-4xl md:text-6xl text-gray-900 mb-4 leading-tight" data-aos="fade-up"
+                    data-aos-delay="200">
+                    Why Take the
+                    <br />
+                    <span
+                        class="inline-block bg-orange-400 text-white font-extrabold px-3 -mb-1 border-b-2 border-indigo-700">
+                        BM Academy SAT?
+                    </span>
+                </h1>
+
+                <!-- Description -->
+                <p class="text-gray-600 text-sm mb-6" data-aos="fade-up" data-aos-delay="250">
+                    Unlock potential with tailored strategies designed for success.<br />
+                    Simplify challenges, maximize results.
+                </p>
+
+                <!-- Reasons -->
+                <ul class="text-gray-600 text-sm space-y-2 mb-6" data-aos="fade-up" data-aos-delay="300">
+                    <li>✅ Easy online test you can take anytime</li>
+                    <li>✅ Scholarships worth ₹5,000–₹15,000</li>
+                    <li>✅ Save money while accessing career-changing courses</li>
+                    <li>✅ Receive a personalized result report with course suggestions</li>
+                </ul>
+
+                <!-- Designed For -->
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4" data-aos="fade-up" data-aos-delay="350">
+                    Designed For</h2>
+
+                <div class="flex flex-wrap gap-3 mb-3" data-aos="fade-up" data-aos-delay="400">
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 text-indigo-800 text-sm font-medium rounded-full shadow-sm">
+                        🏫 <span>School Students</span>
+                        <span class="hidden sm:inline text-xs text-gray-500">(10th–12th)</span>
+                    </span>
+
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-100 text-yellow-800 text-sm font-medium rounded-full shadow-sm">
+                        🎓 <span>College Students</span>
+                    </span>
+                </div>
+
+                <div class="flex flex-wrap gap-3 mb-6" data-aos="fade-up" data-aos-delay="450">
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 text-sm font-medium rounded-full shadow-sm">
+                        💼 <span>Job Seekers</span> & <span>Career Switchers</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="w-full md:w-1/2 flex justify-center" data-aos="zoom-in" data-aos-delay="500">
+                <img class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-xl shadow-md"
+                    src="./assets/images/sat/about.jpg" alt="rightSideImage" />
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-white py-20" id="sat-details" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-6 md:px-12 lg:px-20">
+
+            <!-- Section Title -->
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3 leading-snug">
+                    📅 Upcoming SAT Details
+                    <br />
+                    <span class="text-indigo-600">SAT by BM Academy</span> – Now Open <span
+                        class="text-green-600">Everyday!</span>
+                </h2>
+                <p class="text-base sm:text-lg text-gray-600">
+                    Take the test whenever you're ready — <strong class="text-blue-600">24x7 access</strong> from the
+                    comfort of your home.
+                </p>
+            </div>
+
+
+            <!-- Info Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Card 1 -->
+                <div
+                    class="bg-gradient-to-br from-indigo-50 to-white border border-indigo-100 rounded-2xl p-4 shadow hover:shadow-md transition">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="bg-indigo-100 text-indigo-600 p-3 rounded-full text-xl">
+                            <i class="fas fa-calendar-day"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800">Next Test Date</h4>
+                    </div>
+                    <p class="text-sm text-gray-600">Available Everyday<br><span
+                            class="text-indigo-600 font-medium">24x7 Access</span></p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl p-6 shadow hover:shadow-md transition">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="bg-blue-100 text-blue-600 p-3 rounded-full text-xl">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800">Mode</h4>
+                    </div>
+                    <p class="text-sm text-gray-600">Online via Google Form<br><span
+                            class="text-blue-600 font-medium">Includes timer</span></p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-gradient-to-br from-yellow-50 to-white border border-yellow-100 rounded-2xl p-6 shadow hover:shadow-md transition">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="bg-yellow-100 text-yellow-600 p-3 rounded-full text-xl">
+                            <i class="fas fa-stopwatch"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800">Duration</h4>
+                    </div>
+                    <p class="text-sm text-gray-600">Complete in just<br><span class="text-yellow-600 font-medium">25–30
+                            minutes</span></p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-gradient-to-br from-green-50 to-white border border-green-100 rounded-2xl p-6 shadow hover:shadow-md transition">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="bg-green-100 text-green-600 p-3 rounded-full text-lg">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800">Result Delivery</h4>
+                    </div>
+                    <p class="text-sm text-gray-600">Delivered in<br><span class="text-green-600 font-medium">48
+                            hours</span> via Email & WhatsApp</p>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-16 bg-white border border-gray-100 rounded-2xl px-6 py-10 shadow-sm">
+
+                <!-- Badge Header -->
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1 mb-4 rounded-full bg-indigo-50 text-indigo-600 text-xs font-medium uppercase tracking-wide">
+                    <i class="fas fa-bell"></i>
+                    SAT Anytime Access
+                </div>
+
+                <!-- Main Message -->
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">
+                    Take the test when you're ready
+                </h3>
+                <p class="text-gray-600 text-sm max-w-md mx-auto mb-6">
+                    ✅ Choose your own time.<br />
+                    📲 Instantly get a WhatsApp link after registration.
+                </p>
+
+                <!-- CTA Button -->
+                <a href="#register"
+                    onclick="window.open('https://wa.me/919944288271?text=Hi%20BM%20Academy%2C%20I%20am%20interested%20in%20taking%20the%20SAT%20test.', '_blank')"
+                    class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 text-sm font-semibold rounded-full shadow-md transition duration-200 transform hover:scale-105">
+                    <i class="fas fa-clipboard-check text-white"></i>
+                    Register for SAT Now
+                </a>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="scholarship-slabs" class="bg-gray-50 py-20">
+        <div class="max-w-6xl mx-auto px-6 md:px-12 lg:px-20">
+
+            <!-- Title -->
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-2">
+                    🎓 Scholarship Slabs at BM Academy
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    Unlock your scholarship based on your SAT performance.
+                </p>
+            </div>
+
+            <!-- Slab Table (Centered) -->
+            <div class="w-full max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                <table class="w-full text-left text-sm border-collapse rounded-xl overflow-hidden shadow-md">
+                    <thead>
+                        <tr class="bg-indigo-600 text-white">
+                            <th class="py-3 px-4 font-semibold">Your SAT Score</th>
+                            <th class="py-3 px-4 font-semibold">Scholarship Discount</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white">
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-4">
+                                <i class="fas fa-star text-yellow-500 mr-2"></i>85% and above
+                            </td>
+                            <td class="py-3 px-4 font-semibold text-green-600">80% OFF</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-4">
+                                <i class="fas fa-star-half-alt text-yellow-400 mr-2"></i>70% – 84%
+                            </td>
+                            <td class="py-3 px-4 font-semibold text-green-500">50% OFF</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-4">
+                                <i class="fas fa-circle-notch text-yellow-300 mr-2"></i>50% – 69%
+                            </td>
+                            <td class="py-3 px-4 font-semibold text-yellow-600">25% OFF</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4">
+                                <i class="fas fa-info-circle text-gray-400 mr-2"></i>Below 50%
+                            </td>
+                            <td class="py-3 px-4 font-semibold text-gray-600">Minimum Base Discount</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <!-- Courses Highlight -->
+            <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">
+                    Use your scholarship for <span class="text-yellow-600">BM Academy’s</span><br />
+                    most in-demand programs like:
+                </h3>
+
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium shadow-sm">
+                        <i class="fas fa-bullhorn"></i> Digital Marketing
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium shadow-sm">
+                        <i class="fas fa-brain"></i> Python & Data Science
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 text-teal-800 rounded-full text-sm font-medium shadow-sm">
+                        <i class="fas fa-code"></i> Web & Full Stack Dev
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium shadow-sm">
+                        <i class="fas fa-university"></i> Bank Exam Coaching
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium shadow-sm">
+                        <i class="fas fa-comments"></i> Soft Skills & More
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="testimonials" class="bg-white py-20">
+        <div class="text-center mb-10">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-2">
+                <i class="fas fa-comment-dots text-indigo-600 mr-2"></i> Student Testimonials & Results
+            </h2>
+            <p class="text-gray-600 text-lg">Hear from our successful SAT participants</p>
+        </div>
+
+        <style>
+            @keyframes marqueeScroll {
+                0% {
+                    transform: translateX(0%);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .marquee-inner {
+                animation: marqueeScroll 28s linear infinite;
+            }
+
+            .marquee-reverse {
+                animation-direction: reverse;
+            }
+        </style>
+
+        <!-- Row 1 -->
+        <div class="marquee-row w-full mx-auto max-w-6xl overflow-hidden relative">
+            <div
+                class="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent">
+            </div>
+            <div class="marquee-inner flex min-w-[200%] gap-6 pb-6 pt-10" id="row1"></div>
+            <div
+                class="absolute right-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent">
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="marquee-row w-full mx-auto max-w-6xl overflow-hidden relative">
+            <div
+                class="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent">
+            </div>
+            <div class="marquee-inner marquee-reverse flex min-w-[200%] gap-6 pt-6 pb-10" id="row2"></div>
+            <div
+                class="absolute right-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent">
+            </div>
+        </div>
+
+        <script>
+            const cardsData = [
+                {
+                    name: "Priya",
+                    handle: "College Student",
+                    text: "I scored 78% on the SAT and received 50% off my Digital Marketing course at BM Academy. It was so easy!",
+                },
+                {
+                    name: "Sundar",
+                    handle: "MBA Graduate",
+                    text: "As a working professional, I loved how simple and quick the SAT was. I got 25% off the Power BI course!",
+                },
+            ];
+
+            const row1 = document.getElementById("row1");
+            const row2 = document.getElementById("row2");
+
+            const createCard = (card) => `
+      <div class="bg-gray-50 p-4 rounded-xl w-72 shadow hover:shadow-lg transition duration-300 shrink-0">
+        <div class="flex gap-3 items-center mb-3">
+          <div>
+            <h4 class="font-semibold text-gray-800">${card.name}</h4>
+            <p class="text-xs text-gray-500">${card.handle}</p>
+          </div>
+        </div>
+        <p class="text-gray-700 text-sm mb-4"><i class="fas fa-quote-left text-indigo-400 mr-1"></i>${card.text}</p>
+      </div>
+    `;
+
+            const renderCards = (target) => {
+                const doubled = [...cardsData, ...cardsData];
+                doubled.forEach((card) => target.insertAdjacentHTML("beforeend", createCard(card)));
+            };
+
+            renderCards(row1);
+            renderCards(row2);
+        </script>
+    </section>
+
+
+    <section>
+        <!-- Back to Top Button -->
+<button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+  class="fixed bottom-5 right-5 z-50 bg-indigo-600 hover:bg-indigo-700 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg transition-all">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+    </section>
+
+
+
+
+    <footer class="px-6 md:px-16 lg:px-24 xl:px-32" id="contact">
+        <div
+            class="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30 text-gray-500">
+
+            <!-- Logo & Description -->
+            <div class="flex-1 min-w-[250px]">
+                <a class="site_link" href="Sact.html">
+                    <img src="assets/images/logo/bm.png" alt="Collab - Online Learning Platform"
+                        style="height: 55px; width: auto;">
+                </a>
+                <p class="max-w-sm mt-6">
+                    BM Academy offers hands-on training in courses like Digital Marketing, Web Development, and Cloud
+                    Computing, designed to equip students with essential skills for today's industries. With expert
+                    guidance and career support, we help you unlock your potential and achieve professional growth.
+                </p>
+            </div>
+
+            <!-- Quick Links + Social + Map -->
+            <div class="flex flex-col md:flex-row justify-between w-full md:w-[65%] gap-10">
+
+                <!-- Quick Links -->
+                <div class="flex-1 min-w-[150px]">
+                    <h3 class="font-semibold text-base text-gray-900 mb-3 md:mb-5">Quick Links</h3>
+                    <ul class="text-sm space-y-1">
+                        <li><a href="#home" class="hover:underline transition">Home</a></li>
+                        <li><a href="#Services" class="hover:underline transition">Services</a></li>
+                        <li><a href="#who-can-apply" class="hover:underline transition">Who Can Apply</a></li>
+                        <li><a href="#testimonials" class="hover:underline transition">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <!-- Follow Us -->
+                <div class="flex-1 min-w-[150px]">
+                    <h3 class="font-semibold text-base text-gray-900 mb-3 md:mb-5">Follow Us</h3>
+                    <ul class="flex gap-4 text-lg text-gray-700">
+                        <li><a href="https://www.instagram.com/bmacademypondy/" target="_blank"
+                                class="hover:text-pink-500 transition"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://x.com/BMACADEMYPONDY" target="_blank"
+                                class="hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/people/BM-Academy/61566753898165/" target="_blank"
+                                class="hover:text-blue-700 transition"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.youtube.com/@bmacademypondy" target="_blank"
+                                class="hover:text-red-600 transition"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Google Map -->
+                <div class="flex-1 min-w-[250px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9605.494660602379!2d79.83609451294072!3d11.961680735595172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53636a1752dc05%3A0xaa5795ccc1815bf7!2sBM%20Academy%20-%20Digital%20Marketing%2C%20Full%20Stack%20Development%2C%20IT%20%26%20Skill%20Training%20Institute!5e1!3m2!1sen!2sin!4v1749880774336!5m2!1sen!2sin"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+
+        <p class="py-4 text-center text-sm md:text-base text-gray-500/80">
+            © 2025 <a href="https://thebmacademy.com/" target="_blank" class="hover:underline text-blue-600">BM
+                Academy</a>. All Rights Reserved.
+        </p>
+    </footer>
+
+
+
+</body>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true // Animates elements only the first time they scroll into view
+    });
+</script>
+
+
+
+<script>
+    // Mobile menu toggle
+    const menuButtons = document.querySelectorAll('.menu-btn');
+    const mobileMenus = document.querySelectorAll('.mobile-menu');
+
+    menuButtons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            mobileMenus[index].classList.toggle('hidden');
+        });
+    });
+
+    // Auto-close mobile menu on nav link click
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelectorAll('.mobile-menu').forEach(menu => {
+                menu.classList.add('hidden');
+            });
+        });
+    });
+
+    // Call dropdown toggle
+    function toggleDropdown(event, dropdownId) {
+        const button = event.currentTarget;
+        const dropdown = document.getElementById(dropdownId);
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+        // Close other dropdowns
+        document.querySelectorAll('[id^="call-dropdown-"]').forEach((otherDropdown) => {
+            if (otherDropdown !== dropdown) {
+                otherDropdown.classList.add('hidden');
+            }
+        });
+
+        // Toggle current dropdown
+        dropdown.classList.toggle('hidden');
+        button.setAttribute('aria-expanded', !isExpanded);
+
+        // Close dropdown on outside click
+        document.addEventListener('click', function closeDropdown(e) {
+            if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.classList.add('hidden');
+                button.setAttribute('aria-expanded', 'false');
+                document.removeEventListener('click', closeDropdown);
+            }
+        });
+    }
+</script>
+
+
+
+
+<!-- Body Wrap - End -->
+
+<!-- Framework - Jquery Include -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-dropdown-ml-hack.js"></script>
+
+<!-- animation - jquery include -->
+<script src="assets/js/cursor.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/tilt.min.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/parallax-scroll.js"></script>
+
+<!-- Carousel - Jquery Include -->
+<script src="assets/js/slick.min.js"></script>
+
+<!-- Video & Image Popup - Jquery Include -->
+<script src="assets/js/magnific-popup.min.js"></script>
+
+<!-- Counter Up - Jquery Include -->
+<script src="assets/js/waypoint.js"></script>
+<script src="assets/js/counterup.min.js"></script>
+
+
+
+<!-- Custom - Jquery Include -->
+<script src="assets/js/main.js"></script>
+
+
+
+
+</html>
